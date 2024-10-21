@@ -1,0 +1,1586 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+.active {
+    color: #65c0ba;   
+}
+
+.Abril-font {
+    font-family: "Abril Fatface", serif;
+    font-weight: 100;
+}
+
+.reveal {
+    color: black;
+    opacity: 0;
+    transform: translateY(100px); 
+    transition: opacity 1.2s ease-in-out, transform 1s ease-in-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* --- Section-1 Styling --- */
+#section-1 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-image: url("img/sec-1-bg.jpg");
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+#section-1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.33);
+    z-index: 1;
+}
+
+header {
+    position: absolute;
+    width: 84%;
+    height: 9rem;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#site-logo {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Abril Fatface", serif;   
+    top: 55px;
+    left: 150px;
+    position: absolute;
+    z-index: 2;
+}
+
+/* -- Hamburger Menu Styling --*/
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    height: 31px;
+    margin: 10px;
+    top: 55px;
+    right: 150px;
+    position: absolute;
+    z-index: 100000;
+}
+
+.hamburger-menu .bar {
+    background-color: #FFFFFF;
+    height: 6%;
+    width: 80%;
+    margin: 4px 4px;
+    transition: 0.3s;
+}
+
+.hamburger-menu.open .bar {
+    background-color: #444;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    color: #444;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    font-size: 3rem;
+    padding: 20px;
+    text-align: center;
+    font-family: "Abril Fatface", serif;
+}
+
+.nav-menu a {
+    color: #444;
+    text-decoration: none;
+    display: block;
+    transition: color 0.33s 0.1ms ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: #65c0ba;
+    transition: color 0.33s 0.1ms ease-in-out;
+}
+
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-15px) translateX(7px);
+}
+
+.nav-menu.open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.sec-1-title-div {
+    position: absolute;
+    width: 80%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: 2;
+}
+
+.sec-1-title-div h1 {
+    font-size: 80px;
+    margin: 0 0 24px;
+    font-family: "Abril Fatface", serif;
+}
+
+.sec-1-title-div h4 {
+    font-size: 30px;
+    font-weight: 100;
+    margin: 0 0 48px;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+.sec-1-title-div a {
+    font-size: 15px;
+    padding: 16px 30px;
+    letter-spacing: 0.2em;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+.sec-1-title-div a:hover {background-color: #FFFFFF; color: #444;}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.portrait-img {
+    background-image: url("img/sec-2-img.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 540px;
+    height: 659.33px;
+}
+
+.detail-box {
+    padding: 0 15px 0 48px;
+    width: 570px;
+    height: 379px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.detail-box h2 {
+    font-size: 32px;
+    margin: 0 0 24px 0;
+}
+
+.detail-box p {
+    font-size: 18px;
+    margin: 0 0 16px 0;
+    font-family: "Mukta Mahee", sans-serif;
+    font-weight: 100;
+    color: #717171;
+}
+
+
+/* Video Pop Styling */
+#openPopup {
+    width: 215px;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    text-decoration: none;
+    color: #65c0ba;   
+}
+
+#openPopup h1 {
+    border: 2px solid rgb(205, 205, 205);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin: 0 16px 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#openPopup h1 svg {
+    width: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 0 3px;
+    fill: #65c0ba;   
+}
+
+#openPopup h2 {
+    font-family: "Mukta Mahee", sans-serif;
+    font-size: 18px;
+    margin: auto;
+}
+
+#videoPopup {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed; 
+  z-index: 1000; 
+  left: 0; 
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  background-color: rgba(31, 31, 31, 0.8); 
+  justify-content: center; 
+  align-items: center; 
+}
+
+#videoPopup video {
+  max-width: 90%; 
+  max-height: 900%;
+}
+
+.video-box {
+    padding: 3rem 0;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: aliceblue;
+}
+
+.close {
+    width: 60px;
+    height: 75px;
+    top: -10px;
+    right: 30px;
+    text-align: center;
+    color: rgb(165 161 161);
+    position: absolute;
+    background-color: #00000057;
+    font-size: 55px;
+    cursor: pointer; 
+}
+
+.close:hover {
+    color: #FFFFFF;
+}
+
+
+
+/* --- Section-3 Styling --- */
+#section-3 {
+    background-color: #fafafa;
+    border-top: 1px solid #e0e0e0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 126px;
+}
+
+.sec-3-heading {
+    /* border: 1px solid red; */
+    margin: auto;
+}
+
+.sec-3-heading h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.sec-3-heading p {
+    width: 750px;
+    margin-bottom: 55px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    color: #717171;
+}
+
+.sec-3-items {
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.items {
+    /* border: 1px solid rgb(252, 52, 245); */
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.items img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 24px;
+}
+
+.items h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.items p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: 100;
+    color: #717171;
+}
+
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 150vh;
+    padding: 126px;
+    background: rgb(255,255,255);
+    background: linear-gradient(177deg, rgba(255,255,255,1) 78%, rgba(101,192,186,1) 78.2%);
+}
+
+.sec-4-heading h2 {
+   font-size: 70px;
+   width: 650px;
+   text-align: center;
+   margin: auto;
+   line-height: 70px;
+}
+
+.sec-4-heading p {
+    width: 750px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #717171;
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+
+/* Image Slider CSS */
+.slider{
+    border: 10px solid rgba(160, 78, 61, 0.381);
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+    transition: 1s;
+}
+.list img{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 505;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.dots{
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+.dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+}
+.dots li.active {
+    width: 30px;
+}
+
+
+
+/* --- Section-5 Styling --- */
+#section-5 {
+    background-color: #65c0ba;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.sec-5-heading h2 {
+    font-size: 70px;
+    width: 650px;
+    text-align: center;
+    margin: auto;
+    line-height: 70px;
+ }
+ 
+ .sec-5-heading p {
+     width: 750px;
+     font-size: 20px;
+     font-weight: 200;
+     color: #ececec;
+     text-align: center;
+     margin: 30px 0 65px 0;
+ }
+
+ .sec-5-cards {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.cards {
+    width: 350px;
+    height: 530px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    margin: 0 15px 25px 15px;
+ }
+
+.card-img {
+    background-color: #444;
+    width: 100%;
+    height: 232px;
+    object-fit: cover;
+ }
+
+.card-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.card-details h3 {
+    font-size: 18px;
+    font-weight: 200;
+    color: #CED4DA;
+}
+
+.card-details h2 {
+    font-size: 26px;
+    margin: 0 0 16px 0;
+}
+
+.card-details p {
+    font-size: 18px;
+    font-weight: 200;
+    color: #6C757D;
+}
+
+
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    background-color: #fafafa;
+    width: 100%;
+    height: 85vh;
+    padding: 126px;
+}
+
+#sec-6-heading {
+    font-size: 70px;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.customers-review-sec {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.customer {
+    padding: 20px;
+    width: 390px;
+}
+
+.customer img {
+    background-color: #444;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    margin: 0 0 16px 0;
+}
+
+.customer p {
+    font-size: 20px;
+    font-weight:300;
+    color: #292929;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+.customer h4 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #6C757D;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+
+/* --- Section-7 Styling --- */
+#section-7 {
+    background-color: #ffffff;
+    width: 100%;
+    height: 70vh;
+    padding: 126px;
+}
+
+#section-7 h2 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#section-7 p {
+    width: 720px;
+    font-weight: 100;
+    font-size: 20px;
+    color: #6C757D;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 60px;
+}
+
+.hotels-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: calc(10%-100px);
+    justify-content: center;
+    align-items: center;
+}
+
+.hotel {
+    width: 242px;
+    height: 285px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.hotel img {
+    width: 255px;
+    height: 168px;
+    object-fit: cover;
+}
+
+.hotel h3 {
+    font-size: 20px;
+    text-decoration: none;
+    color: #131313;
+}
+
+.reviews {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+}
+
+.stars {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.stars img {
+    width: 17px;
+    height: auto;
+}
+
+.review-count {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: 300;
+    color: #cccccc;
+    text-decoration: none;
+}
+
+
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 80vh;
+    padding: 126px;
+}
+
+.footer-nav {
+    width: 72%;
+    height: 370px;
+    margin: 0 auto 45px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-cols {
+    width: 230px;
+    height: fit-content;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.footer-nav-heading {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+}
+
+.footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.footer-links {
+    font-size: 18px;
+    color: #ffffffb3;
+    cursor: pointer;
+    font-weight: 100;
+    text-decoration: none;
+    margin: 0 0 18px 0;
+}
+
+.unit {
+    color: #ffffff;
+    font-style: italic;
+    font-weight: 200;
+}
+
+#email {
+    width: 240px;
+    height: 20px;
+    padding: 25px 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#email-icon {
+    position: relative;
+    width: 20px;
+    top: -37px;
+    right: -185px;
+    pointer-events: none;
+}
+
+#email:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(103, 103, 103);
+    cursor: default;
+    color: #cccccc;
+}
+
+#email::placeholder {
+    color: #6a6a6acd;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+#copyright {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0 0 16px 0;
+    padding: 0 0 15px 0;
+    text-align: center;
+    color: #afafaf;
+}
+
+.footer-social-btns {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.social-btn {
+    margin: 13px;
+}
+
+.social-btn:hover {
+    fill: #ffffff;
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    
+/* --- Section-2 Styling --- */
+.portrait-img {
+    width: 450px;
+    height: 550px;
+}
+
+/* --- Section-3 Styling --- */
+.items {
+    width: 250px;
+}
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    height: 100vh;
+    padding: 116px;
+}
+
+.slider{
+    width: 80vw;
+}
+
+/* --- Section-5 Styling --- */
+.sec-5-heading h2 {
+    font-size: 65px;
+}
+ 
+.sec-5-heading p {
+    max-width: 750px;
+    width: 80%;
+    margin: 30px auto 65px auto;
+}
+
+.cards {
+    width: 290px;
+    margin: 0 15px 25px 15px;
+ }
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    height: 75vh;
+    padding: 116px;
+}
+
+/* --- Section-7 Styling --- */
+.hotel img {
+    width: 220px;
+    height: 140px;
+}
+
+.stars img {
+    width: 17px;
+    height: auto;   
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 106px 70px;
+    height: 80vh;
+}
+
+.footer-nav {
+    width: 98%;
+}
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+}
+
+/* --- Section-2 Styling --- */
+#section-2 {flex-direction: column;}
+
+.portrait-img {
+    width: 650px;
+    height: 570px;
+    background-position: top;
+}
+    
+.detail-box {
+    width: 650px;
+    height: 379px;
+}
+    
+.detail-box h2 {
+    font-size: 40px;
+}
+    
+.detail-box p {
+    font-size: 20px;
+}
+
+
+/* --- Section-3 Styling --- */
+#section-3 {
+    height: 115vh;
+    padding: 100px;
+}
+
+.sec-3-heading {
+    margin: auto;
+}
+
+.sec-3-heading h2 {
+    font-size: 32px;
+}
+
+.sec-3-heading p {
+    width: 500px;
+    margin: 30px auto 55px auto;
+    font-size: 20px;
+}
+
+.sec-3-items {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    height: 100vh;
+    padding: 116px;
+}
+
+.sec-4-heading h2 {
+    font-size: 40px;
+}
+
+.slider{
+    width: 40rem;
+    height: 500px;
+}
+
+
+/* --- Section-5 Styling --- */
+#section-5 {
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.sec-5-heading h2 {
+    font-size: 40px;
+}
+ 
+ .sec-5-heading p {
+     width: 550px;
+     font-size: 20px;
+     margin: 20px auto 55px auto;
+ }
+
+ .sec-5-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+ }
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    max-height: 140vh;
+    height: fit-content;
+    padding: 116px;
+}
+
+#sec-6-heading {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.customers-review-sec {
+    flex-wrap: wrap;
+}
+
+.customer {
+    padding: 20px;
+    width: 640px;
+}
+
+
+/* --- Section-7 Styling --- */
+#section-7 {
+    width: 100%;
+    min-height: 96vh;
+    padding: 106px;
+}
+
+#section-7 h2 {
+    font-size: 40px;
+    margin-bottom: 12px;
+}
+
+#section-7 p {
+    width: 500px;
+}
+
+.hotels-list {
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hotel {
+    width: 230px;
+    height: 238px;
+    margin: 0 20px;
+    text-decoration: none;
+}
+
+.hotel img {
+    width: 220px;
+    height: 140px;
+}
+
+.stars img {
+    width: 17px;
+    height: auto;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 106px 70px;
+    height: 65vh;
+}
+
+.footer-nav {
+    width: 98%;
+}
+
+.footer-cols {
+    width: 110px;
+}
+
+#email {
+    width: 110px;
+}
+
+#email-icon {
+    top: -37px;
+    right: -100px;
+    pointer-events: none;
+}
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 767px) and (min-width: 576px) {
+ 
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+}
+
+#site-logo {
+    top: 40px;
+    left: 30px;
+}
+
+.hamburger-menu {
+    top: 40px;
+    right: 30px;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {flex-direction: column;}
+
+.portrait-img {
+    width: 480px;
+    height: 470px;
+    margin-top: 38px;
+    background-position: top;
+}
+    
+.detail-box {
+    width: 480px;
+    height: 379px;
+}
+
+
+/* --- Section-3 Styling --- */
+#section-3 {
+    min-height: 175vh;
+    height: fit-content;
+    padding: 40px;
+}
+
+
+.sec-3-heading p {
+    width: 460px;
+    margin: 30px auto 40px auto;
+}
+
+.sec-3-items {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.items {
+    width: 460px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    height: 70vh;
+    padding: 40px;
+}
+
+.sec-4-heading h2 {
+    font-size: 32px;
+}
+
+.sec-4-heading p {
+    font-size: 18px;
+    width: 460px;
+    margin: 15px auto 35px auto;
+}
+
+.slider{
+    width: 480px;
+    height: 380px;
+}
+
+
+/* --- Section-5 Styling --- */
+#section-5 {
+    height: fit-content;
+    padding: 3rem 0;
+}
+
+.sec-5-heading h2 {
+    font-size: 32px;
+}
+ 
+.sec-5-heading p {
+    width: 500px;
+    font-size: 20px;
+    margin: 15px auto 35px auto;
+}
+
+.sec-5-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    width: 500px;
+    height: 460px;
+}
+
+.card-img {
+    height: 260px;
+}
+
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    height: fit-content;
+    padding: 40px 0;
+}
+
+#sec-6-heading {
+    font-size: 32px;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.customers-review-sec {
+    flex-wrap: wrap;
+}
+
+.customer {
+    margin: 20px 0;
+    padding: 20px;
+    width: 460px;
+    flex-direction: column;
+}
+
+.customer img {
+    background-color: #444;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    margin: 0 0 16px 0;
+}
+
+.customer p {
+    font-size: 20px;
+    font-weight:300;
+    color: #292929;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+.customer h4 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #6C757D;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+
+/* --- Section-7 Styling --- */
+#section-7 {
+    min-height: 85vh;
+    height: fit-content;
+    padding: 106px 0;
+}
+
+#section-7 h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#section-7 p {
+    width: 500px;
+}
+
+.hotels-list {
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hotel {
+    width: 225px;
+    height: 215px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.hotel img {
+    width: 220px;
+    height: 140px;
+}
+
+.stars img {
+    width: 17px;
+    height: auto;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 40px;
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.footer-nav {
+    width: 98%;
+    height: 660px;
+}
+
+.footer-cols {
+    width: 220px;
+}
+
+#email {
+    width: 110px;
+}
+
+#email-icon {
+    top: 8px;
+    right: 15px;
+    pointer-events: none;
+}    
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 575px) {
+
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+    text-align: center;
+}
+
+#site-logo {
+    top: 40px;
+    left: 30px;
+}
+
+.hamburger-menu {
+    top: 40px;
+    right: 30px;
+}
+
+.nav-menu li {
+    font-size: 1.7rem;
+    padding: 20px;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {flex-direction: column;}
+
+.portrait-img {
+    width: 340px;
+    height: 330px;
+    margin-bottom: 10px;
+    background-position: top;
+}
+    
+.detail-box {
+    width: 340px;
+    height: 460px;
+    padding: 10px;
+}
+
+.detail-box h2 {
+    font-size: 27px;
+    text-align: center;
+}
+
+
+/* --- Section-3 Styling --- */
+#section-3 {
+    min-height: 175vh;
+    height: fit-content;
+    padding: 40px;
+}
+
+.sec-3-heading h2 {
+    font-size: 27px;
+    text-align: center;
+}
+    
+.sec-3-heading p {
+    width: 300px;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 30px auto 40px auto;
+}
+
+.sec-3-items {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.items {
+    width: 300px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    height: 70vh;
+    padding: 40px;
+}
+
+.sec-4-heading h2 {
+    font-size: 27px;
+    text-align: center;
+    width: 300px;
+    line-height: 32px;
+}
+
+.sec-4-heading p {
+    width: 310px;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 15px auto 35px auto;
+}
+
+.slider{
+    width: 310px;
+    height: 350px;
+}
+
+
+/* --- Section-5 Styling --- */
+#section-5 {
+    height: fit-content;
+    padding: 3rem 0;
+}
+
+.sec-5-heading h2 {
+    font-size: 32px;
+}
+ 
+.sec-5-heading p {
+    width: 340px;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 15px auto 35px auto;
+}
+
+.sec-5-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    width: 300px;
+    height: 600px;
+}
+
+.card-img {
+    height: 260px;
+}
+
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    height: fit-content;
+    padding: 40px 0;
+}
+
+#sec-6-heading {
+    font-size: 32px;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.customers-review-sec {
+    flex-wrap: wrap;
+}
+
+.customer {
+    margin: 20px 0;
+    padding: 20px;
+    flex-direction: column;
+    width: 310px;
+}
+
+.customer img {
+    background-color: #444;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    margin: 0 0 16px 0;
+}
+
+.customer p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight:300;
+    color: #292929;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+.customer h4 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #6C757D;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+
+/* --- Section-7 Styling --- */
+#section-7 {
+    min-height: 85vh;
+    height: fit-content;
+    padding: 106px 0;
+}
+
+#section-7 h2 {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+#section-7 p {
+    width: 340px;
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.hotels-list {
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.hotel {
+    width: 225px;
+    height: 215px;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.hotel img {
+    width: 220px;
+    height: 140px;
+}
+
+.stars img {
+    width: 17px;
+    height: auto;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 40px;
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.footer-nav {
+    width: 98%;
+    height: 1170px;
+}
+
+.footer-cols {
+    width: 220px;
+}
+
+#email {
+    width: 210px;
+}
+
+#email-icon {
+    top: -40px;
+    right: -165px;
+    /* pointer-events: none; */
+}
+
+}

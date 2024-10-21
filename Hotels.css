@@ -1,0 +1,1169 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+.active {
+    color: #65c0ba;   
+}
+
+.Abril-font {
+    font-family: "Abril Fatface", serif;
+    font-weight: 100;
+}
+
+/* --- Section-1 Styling --- */
+#section-1 {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: top;
+    background-image: url("img/travel-hotel-bg-1.jpg");
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+#section-1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.33);
+    z-index: 1;
+}
+
+header {
+    position: absolute;
+    width: 84%;
+    height: 9rem;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#site-logo {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Abril Fatface", serif;   
+    top: 55px;
+    left: 150px;
+    position: absolute;
+    z-index: 2;
+}
+
+/* -- Hamburger Menu Styling --*/
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    height: 31px;
+    margin: 10px;
+    top: 55px;
+    right: 150px;
+    position: absolute;
+    z-index: 100000;
+}
+
+.hamburger-menu .bar {
+    background-color: #FFFFFF;
+    height: 6%;
+    width: 80%;
+    margin: 4px 4px;
+    transition: 0.3s;
+}
+
+.hamburger-menu.open .bar {
+    background-color: #444;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    color: #444;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    font-size: 3rem;
+    padding: 20px;
+    text-align: center;
+    font-family: "Abril Fatface", serif;
+}
+
+.nav-menu a {
+    color: #444;
+    text-decoration: none;
+    display: block;
+    transition: color 0.33s 0.1ms ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: #65c0ba;
+    transition: color 0.33s 0.1ms ease-in-out;
+}
+
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-15px) translateX(7px);
+}
+
+.nav-menu.open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.sec-1-title-div {
+    position: absolute;
+    width: 80%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: 2;
+}
+
+.sec-1-title-div h1 {
+    font-size: 80px;
+    margin: 0 0 24px;
+    font-family: "Abril Fatface", serif;
+}
+
+.sec-1-title-div h4 {
+    font-size: 30px;
+    font-weight: 100;
+    margin: 0 0 48px;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    background-color: #ffffff;
+    width: 100%;
+    height: 150vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 45px;
+}
+
+.canvas {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.canvas-img {
+    width: 555px;
+    height: 577px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.canvas-detail {
+    width: 555px;
+    height: 577px;
+    padding: 97px 75px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+.canvas-detail h2 {
+    font-size: 40px;
+    margin-bottom: 8px;
+}
+
+.canvas-detail p {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #6C757D;
+    font-weight: 100;
+}
+
+.canvas-detail a {
+    border: 2px solid #65c0ba;
+    border-radius: 5px;
+    width: 177px;
+    height: 47px;
+    font-size: 15px;
+    margin: 20px 0 0 0;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: black;
+    font-family: "Mukta Mahee", sans-serif;
+    letter-spacing: 3px;
+    text-align: center;
+}
+
+
+
+/* --- Section-3 Styling --- */
+#section-3 {
+    background-color: #ffffff;
+    width: 100%;
+    height: 85vh;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 126px;
+}
+
+.sec-3-heading {
+    /* border: 1px solid red; */
+    margin: auto;
+}
+
+.sec-3-heading h2 {
+    text-align: center;
+    font-size: 32px;
+}
+
+.sec-3-heading p {
+    width: 750px;
+    margin-bottom: 55px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 100;
+    color: #717171;
+}
+
+.sec-3-items {
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.items {
+    /* border: 1px solid rgb(252, 52, 245); */
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.items img {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 24px;
+}
+
+.items h2 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.items p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: 100;
+    color: #717171;
+}
+
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 150vh;
+    padding: 126px;
+    background: #ffffff;
+}
+
+.sec-4-heading h2 {
+   font-size: 70px;
+   width: 650px;
+   text-align: center;
+   margin: auto;
+   line-height: 70px;
+}
+
+.sec-4-heading p {
+    width: 750px;
+    font-size: 20px;
+    font-weight: 200;
+    color: #717171;
+    text-align: center;
+    margin: 30px 0 30px 0;
+}
+
+/* Image Slider CSS */
+.slider{
+    border: 10px solid rgba(160, 78, 61, 0.381);
+    width: 1300px;
+    max-width: 100vw;
+    height: 700px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px;
+}
+.list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: flex;
+    width: max-content;
+    transition: 1s;
+}
+.list img{
+    width: 1300px;
+    max-width: 100vw;
+    height: 100%;
+    object-fit: cover;
+}
+.buttons{
+    position: absolute;
+    top: 45%;
+    left: 5%;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons button {
+    width: 50px;
+    height: 50px;
+    border-radius: 505;
+    background-color: #fff5;
+    color: #fff;
+    border: none;
+    font-family: monospace;
+    font-weight: bold;
+}
+.dots{
+    position: absolute;
+    bottom: 10px;
+    color: #fff;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    transition: 1s;
+}
+.dots li {
+    list-style: none;
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+}
+.dots li.active {
+    width: 30px;
+}
+
+
+
+/* --- Section-5 Styling --- */
+#section-5 {
+    background-color: #e9ecef;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 88vh;
+    padding: 45px;
+}
+
+.sec-5-heading h2 {
+    font-size: 70px;
+    width: 650px;
+    text-align: center;
+    margin: auto;
+    line-height: 70px;
+ }
+ 
+ .sec-5-heading p {
+     width: 750px;
+     font-size: 20px;
+     font-weight: 200;
+     color: #6C757D;
+     text-align: center;
+     margin: 30px 0 65px 0;
+ }
+
+ .sec-5-cards {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ }
+
+.cards {
+    width: 350px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+    margin: 0 15px 25px 15px;
+ }
+
+.card-img {
+    background-color: #444;
+    width: 100%;
+    height: 232px;
+    object-fit: cover;
+ }
+
+.card-details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px;
+}
+
+.card-details h2 {
+    font-size: 26px;
+    margin: 0 0 16px 0;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: 80vh;
+    padding: 126px;
+}
+
+.footer-nav {
+    width: 72%;
+    height: 370px;
+    margin: 0 auto 45px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-cols {
+    width: 230px;
+    height: fit-content;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.footer-nav-heading {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+}
+
+.footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.footer-links {
+    font-size: 18px;
+    color: #ffffffb3;
+    cursor: pointer;
+    font-weight: 100;
+    text-decoration: none;
+    margin: 0 0 18px 0;
+}
+
+.unit {
+    color: #ffffff;
+    font-style: italic;
+    font-weight: 200;
+}
+
+#email {
+    width: 240px;
+    height: 20px;
+    padding: 25px 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#email-icon {
+    position: relative;
+    width: 20px;
+    top: -37px;
+    right: -185px;
+    pointer-events: none;
+}
+
+#email:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(103, 103, 103);
+    cursor: default;
+    color: #cccccc;
+}
+
+#email::placeholder {
+    color: #6a6a6acd;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+#copyright {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0 0 16px 0;
+    padding: 0 0 15px 0;
+    text-align: center;
+    color: #afafaf;
+}
+
+.footer-social-btns {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.social-btn {
+    margin: 13px;
+}
+
+.social-btn:hover {
+    fill: #ffffff;
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    
+/* --- Section-2 Styling --- */
+#section-2 {
+    height: 150vh;
+    padding: 45px;
+}
+
+.canvas-img {
+    width: 465px;
+    height: 609px;
+}
+
+.canvas-detail {
+    width: 465px;
+    height: 609px;
+    padding: 97px 66px;
+}
+
+
+/* --- Section-3 Styling --- */
+.items {
+    width: 250px;
+}
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    height: 100vh;
+    padding: 116px;
+}
+
+.slider{
+    width: 80vw;
+}
+
+/* --- Section-5 Styling --- */
+.sec-5-heading h2 {
+    font-size: 65px;
+}
+ 
+.sec-5-heading p {
+    max-width: 750px;
+    width: 80%;
+    margin: 30px auto 65px auto;
+}
+
+.cards {
+    width: 290px;
+    margin: 0 15px 25px 15px;
+ }
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    height: 75vh;
+    padding: 116px;
+}
+
+/* --- Section-7 Styling --- */
+.hotel img {
+    width: 220px;
+    height: 140px;
+}
+
+.stars img {
+    width: 17px;
+    height: auto;   
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 106px 70px;
+    height: 80vh;
+}
+
+.footer-nav {
+    width: 98%;
+}
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+}
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    background-color: #ffffff;  
+    width: 100%;
+    height: 127vh;
+    padding: 45px;
+}
+
+.canvas-img {
+    width: 360px;
+    height: 500px;
+}
+
+.canvas-detail {
+    width: 465px;
+    height: 500px;
+    padding: 67px 40px;
+}
+
+.canvas-detail h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.canvas-detail p {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+
+/* --- Section-3 Styling --- */
+#section-3 {
+    height: 115vh;
+    padding: 100px;
+}
+
+.sec-3-heading {
+    margin: auto;
+}
+
+.sec-3-heading h2 {
+    font-size: 32px;
+}
+
+.sec-3-heading p {
+    width: 500px;
+    margin: 30px auto 55px auto;
+    font-size: 20px;
+}
+
+.sec-3-items {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    height: 100vh;
+    padding: 116px;
+}
+
+.sec-4-heading h2 {
+    font-size: 40px;
+}
+
+.slider{
+    width: 40rem;
+    height: 500px;
+}
+
+
+/* --- Section-5 Styling --- */
+#section-5 {
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.sec-5-heading h2 {
+    font-size: 40px;
+}
+ 
+ .sec-5-heading p {
+     width: 550px;
+     font-size: 20px;
+     margin: 20px auto 55px auto;
+ }
+
+ .sec-5-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+ }
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 106px 70px;
+    height: 65vh;
+}
+
+.footer-nav {
+    width: 98%;
+}
+
+.footer-cols {
+    width: 110px;
+}
+
+#email {
+    width: 110px;
+}
+
+#email-icon {
+    top: -37px;
+    right: -100px;
+    pointer-events: none;
+}
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 767px) and (min-width: 576px) {
+ 
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+}
+
+#site-logo {
+    top: 40px;
+    left: 30px;
+}
+
+.hamburger-menu {
+    top: 40px;
+    right: 30px;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    background-color: #ffffff;  
+    width: 100%;
+    height: fit-content;
+    padding: 45px;
+}
+
+.canvas {
+    flex-direction: column; 
+    flex-wrap: nowrap;
+}
+
+.canvas-img {
+    width: 510px;
+    height: 460px;
+}
+
+.canvas-detail {
+    width: 510px;
+    height: 480px;
+    padding: 67px 40px;
+}
+
+.canvas-detail h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.canvas-detail p {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+
+/* --- Section-3 Styling --- */
+#section-3 {
+    min-height: 175vh;
+    height: fit-content;
+    padding: 40px;
+}
+
+
+.sec-3-heading p {
+    width: 460px;
+    margin: 30px auto 40px auto;
+}
+
+.sec-3-items {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.items {
+    width: 460px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    height: 70vh;
+    padding: 40px;
+}
+
+.sec-4-heading h2 {
+    font-size: 32px;
+}
+
+.sec-4-heading p {
+    font-size: 18px;
+    width: 460px;
+    margin: 15px auto 35px auto;
+}
+
+.slider{
+    width: 480px;
+    height: 380px;
+}
+
+
+/* --- Section-5 Styling --- */
+#section-5 {
+    height: fit-content;
+    padding: 3rem 0;
+}
+
+.sec-5-heading h2 {
+    font-size: 32px;
+}
+ 
+.sec-5-heading p {
+    width: 500px;
+    font-size: 20px;
+    margin: 15px auto 35px auto;
+}
+
+.sec-5-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    width: 500px;
+    height: 370px;
+}
+
+.card-img {
+    height: 260px;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 40px;
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.footer-nav {
+    width: 98%;
+    height: 660px;
+}
+
+.footer-cols {
+    width: 220px;
+}
+
+#email {
+    width: 110px;
+}
+
+#email-icon {
+    top: 8px;
+    right: 15px;
+    pointer-events: none;
+}    
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 575px) {
+
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+    text-align: center;
+}
+
+#site-logo {
+    top: 40px;
+    left: 30px;
+}
+
+.hamburger-menu {
+    top: 40px;
+    right: 30px;
+}
+
+.nav-menu li {
+    font-size: 1.7rem;
+    padding: 20px;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    background-color: #ffffff;  
+    width: 100%;
+    height: fit-content;
+    padding: 10px;
+}
+
+.canvas {
+    flex-direction: column; 
+    flex-wrap: nowrap;
+}
+
+.canvas-img {
+    width: 370px;
+    height: 320px;
+}
+
+.canvas-detail {
+    width: 370px;
+    height: 375px;
+    padding: 15px 10px;
+}
+
+.canvas-detail h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+}
+
+.canvas-detail p {
+    font-size: 16px;
+    margin-bottom: 16px;
+}
+
+
+/* --- Section-3 Styling --- */
+#section-3 {
+    min-height: 175vh;
+    height: fit-content;
+    padding: 40px;
+}
+
+.sec-3-heading h2 {
+    font-size: 27px;
+    text-align: center;
+}
+    
+.sec-3-heading p {
+    width: 300px;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 30px auto 40px auto;
+}
+
+.sec-3-items {
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.items {
+    width: 300px;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+
+/* --- Section-4 Styling --- */
+#section-4 {
+    height: 70vh;
+    padding: 40px;
+}
+
+.sec-4-heading h2 {
+    font-size: 27px;
+    text-align: center;
+    width: 300px;
+    line-height: 32px;
+}
+
+.sec-4-heading p {
+    width: 310px;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 15px auto 35px auto;
+}
+
+.slider{
+    width: 310px;
+    height: 350px;
+}
+
+
+/* --- Section-5 Styling --- */
+#section-5 {
+    height: fit-content;
+    padding: 3rem 0;
+}
+
+.sec-5-heading h2 {
+    font-size: 32px;
+}
+ 
+.sec-5-heading p {
+    width: 340px;
+    font-size: 18px;
+    line-height: 25px;
+    margin: 15px auto 35px auto;
+}
+
+.sec-5-cards {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.cards {
+    width: 300px;
+    height: 410px;
+}
+
+.card-img {
+    height: 260px;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 40px;
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.footer-nav {
+    width: 98%;
+    height: 1170px;
+}
+
+.footer-cols {
+    width: 220px;
+}
+
+#email {
+    width: 210px;
+}
+
+#email-icon {
+    top: -40px;
+    right: -165px;
+    /* pointer-events: none; */
+}
+
+}

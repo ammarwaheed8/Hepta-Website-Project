@@ -1,0 +1,899 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+.active {
+    color: #65c0ba;   
+}
+
+.Abril-font {
+    font-family: "Abril Fatface", serif;
+    font-weight: 100;
+}
+
+
+/* --- Section-1 Styling --- */
+#section-1 {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-image: url("img/hotel-img-3.jpg");
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+#section-1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.33);
+    z-index: 1;
+}
+
+header {
+    position: absolute;
+    width: 84%;
+    height: 9rem;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#site-logo {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Abril Fatface", serif;   
+    top: 55px;
+    left: 150px;
+    position: absolute;
+    z-index: 2;
+}
+
+/* -- Hamburger Menu Styling --*/
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    height: 31px;
+    margin: 10px;
+    top: 55px;
+    right: 150px;
+    position: absolute;
+    z-index: 100000;
+}
+
+.hamburger-menu .bar {
+    background-color: #FFFFFF;
+    height: 6%;
+    width: 80%;
+    margin: 4px 4px;
+    transition: 0.3s;
+}
+
+.hamburger-menu.open .bar {
+    background-color: #444;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    color: #444;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    font-size: 3rem;
+    padding: 20px;
+    text-align: center;
+    font-family: "Abril Fatface", serif;
+}
+
+.nav-menu a {
+    color: #444;
+    text-decoration: none;
+    display: block;
+    transition: color 0.33s 0.1ms ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: #65c0ba;
+    transition: color 0.33s 0.1ms ease-in-out;
+}
+
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-15px) translateX(7px);
+}
+
+.nav-menu.open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.sec-1-title-div {
+    position: absolute;
+    width: 80%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: 2;
+}
+
+.sec-1-title-div h1 {
+    font-size: 80px;
+    margin: 0 0 24px;
+    font-family: "Abril Fatface", serif;
+}
+
+.sec-1-title-div h4 {
+    font-size: 30px;
+    font-weight: 100;
+    margin: 0 0 48px;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+.sec-1-title-div a {
+    font-size: 15px;
+    padding: 16px 30px;
+    letter-spacing: 0.2em;
+    border: 2px solid #FFFFFF;
+    border-radius: 4px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+.sec-1-title-div a:hover {background-color: #FFFFFF; color: #444;}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    width: 100%;
+    height: fit-content;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background-color: #ffffff;
+    padding: 7em 0;
+}
+
+.contact-form {
+    border: 1px solid rgba(210, 209, 209, 0.643);
+    width: 638px;
+    height: 638px;
+    padding: 3rem;
+    box-shadow: 6px 6px 17px #b3b2b2cf;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4px 30px;
+}
+
+.email-col, .message-col {
+    grid-column: 1 / 3;
+}
+
+
+.field-col {
+    padding: 0 0 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.field-col label {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 100;
+    color: #6c757d;
+}
+
+.field-col input, textarea {
+    font-size: 19px;
+    color: #4bafa9;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #ced0d1;
+    padding: 10px 10px;
+}
+
+#message {
+    height: 190px;
+}
+
+
+.contact-details {
+    width: 396px;
+    height: 382px;
+    padding: 0 15px;
+    margin: 0 0 0 80px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.contact-details h3 {
+    font-size: 16px;
+    font-weight: 700;
+    color: #65c0ba;
+    margin: 0 0 10px 0;
+}
+
+.contact-details h1 {
+    font-size: 30px;
+    margin: 0 0 30px 0;
+}
+
+#send-btn {
+    font-size: 15px;
+    width: 160px;
+    height: 48px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: 2px solid #65c0ba;
+}
+
+#send-btn:hover {
+    color: #ffffff;
+    background-color: #72cdc7;
+    transition: all 0.25s 0.1ms ease-in-out;
+}
+
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    background-color: #fafafa;
+    width: 100%;
+    height: fit-content;
+    padding: 116px;
+}
+
+#sec-6-heading {
+    font-size: 70px;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.customers-review-sec {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+}
+
+.customer {
+    padding: 20px;
+    width: 390px;
+}
+
+.customer img {
+    background-color: #444;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    margin: 0 0 16px 0;
+}
+
+.customer p {
+    font-size: 20px;
+    font-weight:300;
+    color: #292929;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+.customer h4 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #6C757D;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: fit-content;
+    padding: 126px;
+}
+
+.footer-nav {
+    width: 72%;
+    height: 370px;
+    margin: 0 auto 45px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-cols {
+    width: 230px;
+    height: fit-content;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.footer-nav-heading {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+}
+
+.footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.footer-links {
+    font-size: 18px;
+    color: #ffffffb3;
+    cursor: pointer;
+    font-weight: 100;
+    text-decoration: none;
+    margin: 0 0 18px 0;
+}
+
+.unit {
+    color: #ffffff;
+    font-style: italic;
+    font-weight: 200;
+}
+
+#email {
+    width: 240px;
+    height: 20px;
+    padding: 25px 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#email-icon {
+    position: relative;
+    width: 20px;
+    top: -37px;
+    right: -185px;
+    pointer-events: none;
+}
+
+#email:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(103, 103, 103);
+    cursor: default;
+    color: #cccccc;
+}
+
+#email::placeholder {
+    color: #6a6a6acd;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+#copyright {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0 0 16px 0;
+    padding: 0 0 15px 0;
+    text-align: center;
+    color: #afafaf;
+}
+
+.footer-social-btns {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.social-btn {
+    margin: 13px;
+}
+
+.social-btn:hover {
+    fill: #ffffff;
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    
+/* --- Section-1 Styling --- */
+.portrait-img {
+    width: 450px;
+    height: 550px;
+}
+
+
+/* --- Section-2 Styling --- */
+
+.contact-form {
+    width: 530px;
+    height: 580px;
+    padding: 3rem;
+}
+
+.field-col {
+    padding: 0 0 8px 0;
+}
+
+.field-col label {
+    margin: 0 0 0 0;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 106px 70px;
+    height: 80vh;
+}
+
+.footer-nav {
+    width: 98%;
+}
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+}
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    padding: 4em 0;
+}
+
+.contact-form {
+    width: 350px;
+    height: 540px;
+    padding: 2rem;
+    gap: 4px 10px;
+}
+
+.field-col {
+    padding: 0 0 8px 0;
+}
+
+.field-col label {
+    margin: 0 0 0 0;
+}
+
+.field-col input, textarea {
+    font-size: 19px;
+    color: #4bafa9;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #ced0d1;
+    padding: 10px 10px;
+}
+
+#message {
+    height: 190px;
+}
+
+
+.contact-details {
+    width: 310px;
+    height: 382px;
+    margin: 0 0 0 30px;
+    word-wrap: break-word;
+}
+
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    max-height: 140vh;
+    height: fit-content;
+    padding: 116px;
+}
+
+#sec-6-heading {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.customers-review-sec {
+    flex-wrap: wrap;
+}
+
+.customer {
+    padding: 20px;
+    width: 640px;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 106px 70px;
+}
+
+.footer-nav {
+    width: 98%;
+}
+
+.footer-cols {
+    width: 110px;
+}
+
+#email {
+    width: 110px;
+}
+
+#email-icon {
+    top: -37px;
+    right: -100px;
+    pointer-events: none;
+}
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 767px) and (min-width: 576px) {
+ 
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+}
+
+#site-logo {
+    top: 40px;
+    left: 30px;
+}
+
+.hamburger-menu {
+    top: 40px;
+    right: 30px;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    padding: 2em;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    gap: 2rem;
+}
+
+.contact-form {
+    width: 85%;
+    height: 540px;
+    padding: 2rem;
+    gap: 4px 10px;
+}
+
+.field-col {
+    padding: 0 0 8px 0;
+}
+
+.field-col label {
+    margin: 0 0 0 0;
+}
+
+.field-col input, textarea {
+    font-size: 19px;
+    color: #4bafa9;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #ced0d1;
+    padding: 10px 10px;
+}
+
+#message {
+    height: 190px;
+}
+
+
+.contact-details {
+    width: 85%;
+    height: 382px;
+    margin: 0 0 0 30px;
+    word-wrap: break-word;
+}
+
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    height: fit-content;
+    padding: 40px 0;
+}
+
+#sec-6-heading {
+    font-size: 32px;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.customers-review-sec {
+    flex-wrap: wrap;
+}
+
+.customer {
+    margin: 20px 0;
+    padding: 20px;
+    width: 460px;
+    flex-direction: column;
+}
+
+.customer img {
+    background-color: #444;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    margin: 0 0 16px 0;
+}
+
+.customer p {
+    font-size: 20px;
+    font-weight:300;
+    color: #292929;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+.customer h4 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #6C757D;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 40px;
+}
+
+.footer-nav {
+    width: 98%;
+    height: 660px;
+}
+
+.footer-cols {
+    width: 220px;
+}
+
+#email {
+    width: 110px;
+}
+
+#email-icon {
+    top: 8px;
+    right: 15px;
+    pointer-events: none;
+}    
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 575px) {
+
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+    text-align: center;
+}
+
+#site-logo {
+    top: 40px;
+    left: 30px;
+}
+
+.hamburger-menu {
+    top: 40px;
+    right: 30px;
+}
+
+.nav-menu li {
+    font-size: 1.7rem;
+    padding: 20px;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    padding: 1em;
+    flex-direction: column;
+    align-items: center;
+    height: fit-content;
+    gap: 5rem;
+}
+
+.contact-form {
+    width: 95%;
+    height: 540px;
+    padding: 2rem;
+    gap: 4px 10px;
+}
+
+.field-col {
+    padding: 0 0 8px 0;
+}
+
+.field-col label {
+    margin: 0 0 0 0;
+}
+
+.field-col input, textarea {
+    font-size: 19px;
+    color: #4bafa9;
+    width: 100%;
+    height: 50px;
+    border-radius: 5px;
+    border: 2px solid #ced0d1;
+    padding: 10px 10px;
+}
+
+#message {
+    height: 190px;
+}
+
+
+.contact-details {
+    width: 95%;
+    height: 382px;
+    margin: 0 0 0 30px;
+    word-wrap: break-word;
+}
+
+.contact-details h1 {
+    font-size: 25px;
+}
+
+
+/* --- Section-6 Styling --- */
+#section-6 {
+    height: fit-content;
+    padding: 40px 0;
+}
+
+#sec-6-heading {
+    font-size: 32px;
+    margin: 0 0 40px 0;
+    text-align: center;
+}
+
+.customers-review-sec {
+    flex-wrap: wrap;
+}
+
+.customer {
+    margin: 20px 0;
+    padding: 20px;
+    flex-direction: column;
+    width: 310px;
+}
+
+.customer img {
+    background-color: #444;
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+    margin: 0 0 16px 0;
+}
+
+.customer p {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight:300;
+    color: #292929;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+.customer h4 {
+    font-size: 18px;
+    font-weight: 100;
+    color: #6C757D;
+    margin: 0 0 16px 0;
+    font-style: italic;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 40px;
+    min-height: 100vh;
+    height: fit-content;
+}
+
+.footer-nav {
+    width: 98%;
+    height: 1170px;
+}
+
+.footer-cols {
+    width: 220px;
+}
+
+#email {
+    width: 210px;
+}
+
+#email-icon {
+    top: -40px;
+    right: -165px;
+    pointer-events: none;
+}
+
+}
