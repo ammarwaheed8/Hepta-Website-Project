@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Mukta+Mahee:wght@200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+.active {
+    color: #65c0ba;   
+}
+
+.Abril-font {
+    font-family: "Abril Fatface", serif;
+    font-weight: 100;
+}
+
+/* --- Section-1 Styling --- */
+#section-1 {
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: top;
+    background-image: url("img/gallery-bg-1.jpg");
+    background-size: cover;
+    color: #FFFFFF;
+}
+
+#section-1::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.33);
+    z-index: 1;
+}
+
+header {
+    position: absolute;
+    width: 84%;
+    height: 9rem;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#site-logo {
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #FFFFFF;
+    font-family: "Abril Fatface", serif;   
+    top: 55px;
+    left: 150px;
+    position: absolute;
+    z-index: 2;
+}
+
+/* -- Hamburger Menu Styling --*/
+.hamburger-menu {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: 48px;
+    height: 31px;
+    margin: 10px;
+    top: 55px;
+    right: 150px;
+    position: absolute;
+    z-index: 100000;
+}
+
+.hamburger-menu .bar {
+    background-color: #FFFFFF;
+    height: 6%;
+    width: 80%;
+    margin: 4px 4px;
+    transition: 0.3s;
+}
+
+.hamburger-menu.open .bar {
+    background-color: #444;
+}
+
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #FFFFFF;
+    color: #444;
+    transform: translateX(100%);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    font-size: 3rem;
+    padding: 20px;
+    text-align: center;
+    font-family: "Abril Fatface", serif;
+}
+
+.nav-menu a {
+    color: #444;
+    text-decoration: none;
+    display: block;
+    transition: color 0.33s 0.1ms ease-in-out;
+}
+
+.nav-menu a:hover {
+    color: #65c0ba;
+    transition: color 0.33s 0.1ms ease-in-out;
+}
+
+.hamburger-menu.open .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+}
+
+.hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-15px) translateX(7px);
+}
+
+.nav-menu.open {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.sec-1-title-div {
+    position: absolute;
+    width: 80%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    z-index: 2;
+}
+
+.sec-1-title-div h1 {
+    font-size: 80px;
+    font-family: "Abril Fatface", serif;
+}
+
+.sec-1-title-div h4 {
+    font-size: 30px;
+    font-weight: 100;
+    font-family: "Mukta Mahee", sans-serif;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    background-color: #ffffff;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    padding: 126px;
+}
+
+.canvas {
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.images {
+    width: 255px;
+    height: 170px;    
+}
+
+#image-9, #image-10 {
+    width: 538px;
+    height: 362px;
+    grid-column: span 2;    
+    grid-row: span 2;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    background-color: #1A1A1A;
+    width: 100%;
+    height: fit-content;
+    padding: 126px;
+}
+
+.footer-nav {
+    width: 72%;
+    height: 370px;
+    margin: 0 auto 45px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-cols {
+    width: 130px;
+    height: fit-content;
+    padding: 2px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.footer-nav-heading {
+    font-size: 18px;
+    color: #ffffff;
+    margin: 0 0 20px 0;
+}
+
+.footer-contact-details {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content:flex-start;
+    align-items: flex-start;
+}
+
+.footer-links {
+    font-size: 18px;
+    color: #ffffffb3;
+    cursor: pointer;
+    font-weight: 100;
+    text-decoration: none;
+    margin: 0 0 18px 0;
+}
+
+.unit {
+    color: #ffffff;
+    font-style: italic;
+    font-weight: 200;
+}
+
+#email {
+    width: 240px;
+    height: 20px;
+    padding: 25px 10px;
+    margin-top: 10px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#email-icon {
+    position: relative;
+    width: 20px;
+    top: -37px;
+    right: -185px;
+    pointer-events: none;
+}
+
+#email:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(103, 103, 103);
+    cursor: default;
+    color: #cccccc;
+}
+
+#email::placeholder {
+    color: #6a6a6acd;
+    font-size: 16px;
+    font-weight: 100;
+    font-style: italic;
+}
+
+#copyright {
+    font-size: 18px;
+    font-weight: 100;
+    margin: 0 0 16px 0;
+    padding: 0 0 15px 0;
+    text-align: center;
+    color: #afafaf;
+}
+
+.footer-social-btns {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.social-btn {
+    margin: 13px;
+}
+
+.social-btn:hover {
+    fill: #ffffff;
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    
+/* --- Section-2 Styling --- */
+#section-2 {
+    padding: 45px;
+}
+
+.images {
+    width: 220px;
+    height: 140px;    
+}
+
+#image-9, #image-10 {
+    width: 470px;
+    height: 310px;
+    grid-column: span 2;    
+    grid-row: span 2;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 106px 120px;
+    height: 80vh;
+}
+
+.footer-nav {
+    width: 98%;
+}
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 991px) and (min-width: 768px) {
+
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+}
+
+/* --- Section-2 Styling --- */
+#section-2 {
+    padding: 70px;
+}
+
+.canvas {
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: repeat(7, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.images, #image-9, #image-10 {
+    width: 330px;
+    height: 230px;
+    grid-column: auto;
+    grid-row: auto;
+}
+
+
+/* --- Footer Styling --- */
+footer {
+    padding: 106px 70px;
+}
+
+.footer-nav {
+    width: 98%;
+}
+
+.footer-cols {
+    width: 110px;
+}
+
+#email {
+    width: 110px;
+}
+
+#email-icon {
+    top: -37px;
+    right: -100px;
+    pointer-events: none;
+}
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 767px) and (min-width: 576px) {
+ 
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+}
+
+#site-logo {
+    top: 40px;
+    left: 30px;
+}
+
+.hamburger-menu {
+    top: 40px;
+    right: 30px;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {padding: 60px;}
+
+.canvas {
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: repeat(14, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+.images, #image-9, #image-10 {
+    width: 470px;
+    height: 310px;
+    grid-column: auto;
+    grid-row: auto;
+}
+
+/* --- Footer Styling --- */
+footer {
+    padding: 40px;
+    height: fit-content;
+}
+
+.footer-nav {
+    width: 98%;
+    height: 660px;
+}
+
+.footer-cols {
+    width: 220px;
+}
+
+#email {
+    width: 110px;
+}
+
+#email-icon {
+    top: 8px;
+    right: 15px;
+    pointer-events: none;
+}    
+
+}
+
+
+/* ------ Media Query for Laptop / Tablets ------ */
+@media screen and (max-width: 575px) {
+
+/* --- Section-1 Styling --- */
+.sec-1-title-div h1 {
+    font-size: 40px;
+}
+    
+.sec-1-title-div h4 {
+    font-size: 18px;
+    text-align: center;
+}
+
+#site-logo {
+    top: 40px;
+    left: 30px;
+}
+
+.hamburger-menu {
+    top: 40px;
+    right: 30px;
+}
+
+.nav-menu li {
+    font-size: 1.7rem;
+    padding: 20px;
+}
+
+
+/* --- Section-2 Styling --- */
+#section-2 {padding: 30px;}
+
+.canvas {
+    padding: 10px;
+    width: fit-content;
+    height: fit-content;
+    display: grid;
+    grid-template-rows: repeat(14, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+}
+
+.images, #image-9, #image-10 {
+    width: 325px;
+    height: 250px;
+    grid-column: auto;
+    grid-row: auto;
+}
+
+/* --- Footer Styling --- */
+footer {
+    padding: 40px;
+    height: fit-content;
+}
+
+.footer-nav {
+    width: 98%;
+    height: fit-content;
+}
+
+.footer-cols {
+    width: 220px;
+    margin: 25px;
+}
+
+#email {
+    width: 210px;
+}
+
+#email-icon {
+    top: -40px;
+    right: -165px;
+    /* pointer-events: none; */
+}
+
+}
